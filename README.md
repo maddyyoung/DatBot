@@ -1,5 +1,6 @@
 # DatBot
 A bot for discord. O shit waddup!
+
 Written in node.js and uses mongoDB
 
 # Requirements
