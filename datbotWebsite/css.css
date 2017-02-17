@@ -1,0 +1,373 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family:'Ubuntu', sans-serif;
+}
+
+html,body{
+	height: 100%;
+}
+
+::-webkit-scrollbar-track
+{
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #333333;
+}
+
+/** front page **/
+
+#indexWrapper{
+	width:100%;
+	min-height:100%;
+	background-color: #293940;
+	z-index: 1;
+}
+
+#content{
+	width: 100%;
+	position: absolute;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+#content h1{
+	padding-top: 20px;
+	text-align: center;
+ 	color:#FFFFFF;
+ 	font-size:80px;
+ 	margin-bottom:20px;
+}
+
+#content p{
+	color:#FFFFFF;
+	font-size: 20pt;
+	text-align:center;
+}
+
+#content a{
+	border-radius:15px;
+	font-size:20pt;
+	padding-top:20px;
+	padding-bottom:20px;
+	text-align:center;
+	width:250px;
+	display: block;
+	background-color:#303030;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+#content a:hover{
+	color:#ccb89f;
+}
+
+#content ul{
+	text-align:center;
+	margin-top: 60px;
+}
+
+#content li{
+	display: inline-block;
+	list-style-type: none;
+	padding-right: 20px;
+	margin-top: 40px;
+}
+
+/** navbar and header **/
+
+#header{
+	width:100%;
+	height:325px;
+	color:#FFFFFF;
+	background-color:#293940;
+	text-align:center;
+	background: url('succulents.jpg');
+	background-size: cover;
+}
+
+#header h1{
+	padding-top:125px;
+	color:#FFFFFF;
+}
+
+#header p{
+	margin-top:30px;
+	color:#FFFFFF;
+}
+
+.fixed{
+	position: fixed;
+}
+
+ul#navList{
+	width:100%;
+	color:#FFFFFF;
+	background-color:#303030;
+	list-style-type:none;
+	margin:0;
+	padding:0px;
+	text-align: center;
+	z-index:1;
+}
+
+ul#navList li.mainItem{
+	padding-top:17px;
+	padding-left:10px;
+	padding-right:10px;
+	background-color:#303030;
+	height:33px;
+	display:inline-block;
+	position:relative;
+	z-index:1;
+}
+
+ul#navList li.mainItem:hover{
+	color:#afcace;
+}
+
+ul#navList a.navLink{
+	color:#ffffff;	
+	text-decoration: none;
+	z-index:1;
+}
+
+ul#navList a.navLink:hover{
+	color:#afcace;
+}
+
+.dropdown{
+	position: relative;
+	display: inline-block;
+	z-index:100;
+}
+
+ul.dropdown-content{
+	display:none;
+	position:absolute;
+	background-color:#212121;
+	min-width:150px;
+	list-style-type:none;
+	z-index:100;
+}
+
+ul.dropdown-content a{
+	padding-left: 20px;
+	padding-top:12px;
+	min-width:150px;
+	height:30px;
+	text-decoration: none;
+	color:#ccb89f;
+	display:block;
+	z-index:100;
+}
+
+ul.dropdown-content a:hover{
+	color:#afcace;
+	background-color: #303030;
+}
+
+ul.dropdown-content li{
+	text-align: left;
+	z-index:100;
+}
+
+.dropdown:hover .dropdown-content{
+	display:block;
+	z-index:100;
+}
+
+
+/** command list **/
+
+#wrapper{
+	min-height:100%;
+	width:100%;
+	background-color: #e0e0e0;
+}
+
+#commandListContent{
+	margin-top:10px;
+	margin-right: auto;
+	margin-left: auto;
+	max-width:900px;
+	height:100%;
+}
+
+.commands{
+	color:#FFFFFF;
+	max-width:100%;
+	margin: 0px 10px 20px 10px; /** top right bottom left **/
+	display:block;
+	position: relative;
+	vertical-align: top;
+	text-align: center;
+}
+
+.commands ul{
+	list-style-type:none;
+}
+
+.commands a.commandLink{
+	padding-top:12px;
+	text-decoration: none;
+	color:#ffffff;
+	display:block;
+	width:100%;
+	height:20px;
+	background-color:#333333;
+}
+
+.commands a.commandLink:hover{
+	background-color:#293940;
+}
+
+.commands h2{
+	background-color: #293940;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.alias{
+	color:#FFFFFF;
+	max-width:100%;
+	margin: 0px 10px 20px 10px; /** top right bottom left **/
+	display:block;
+	position: relative;
+	vertical-align: top;
+	text-align: center;
+	background-color:#303030;
+}
+
+.alias h2{
+	background-color: #293940;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.alias a{
+	text-decoration: none;
+	color:#ffffff;
+}
+.alias a:hover{
+	text-decoration: underline;
+}
+
+/** command page **/
+
+#commandWrapper{
+	width:100%;
+	min-height:100%;
+	background-color: #293940;
+	margin-bottom:0px;
+}
+
+#command{
+	padding-top: 40px;
+	text-align: center;
+	width:100%;
+}
+
+#command h1{
+	font-size:250%;
+	color:#ffffff;
+	margin-bottom:50px;
+}
+
+#command p{
+	color:#ffffff;
+	padding-bottom: 20px;
+}
+
+/** alias/quotes/karma page **/
+
+
+#pageContent {
+	padding-top: 40px;
+	width:100%;
+	color:#ffffff;
+}
+
+#pageContent h1{
+	text-align: center;
+	font-size:250%;
+	margin-bottom:20px;	
+}
+
+#pageContent ul.aliasList{	
+	list-style-type:none;	
+	background-color:#16292b;
+}
+
+#pageContent li.aliasName{
+	text-align: left;
+	padding-left: 40px;
+	padding-top: 10px;
+}
+
+#pageContent li.aliasDesc{
+	margin-top:10px;
+	text-align: center;
+	padding-top:10px;
+	padding-right: 100px;
+	padding-left: 100px;
+	padding-bottom: 10px;
+	background-color:#293940;
+	margin-left:-40px;
+}
+
+#pageContent ul.contentList{
+	margin-bottom:20px;
+	list-style-type:none;
+	margin-left:50px;	
+	margin-right:50px;
+}
+
+#pageContent li.listItem{
+	padding-top:5px;
+}
+
+#pageContent p{
+	margin-left:40px;
+}
+
+#pageContent h3{
+	margin-left: 40px;
+}
+
+#formDiv{
+	text-align: center;
+	width:500px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#formDiv span#name{
+	font-size: 150%;	
+}
+
+#formDiv #input{
+	font-size: 150%;	
+	margin-top:10px;
+	margin-bottom:10px;
+	border-radius:5px;
+	height:30px;
+}
+
+#formDiv #button{
+	font-size: 150%;
+	background-color:#303030;
+	color:#ffffff;
+	padding:5px 10px 5px 10px;
+	margin-top:5px;
+	border-style:none;
+}
