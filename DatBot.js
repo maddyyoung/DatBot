@@ -5,6 +5,8 @@
 
 
 var Discord = require("discord.js");
+var fs = require('fs');
+var readLine = require('readline');
 
 var mybot = new Discord.Client();
 
@@ -1129,6 +1131,42 @@ var commands = {
 				// console.log(thing);
 			}
 			msg.reply(thing + " is for nerds");
+		}
+	},
+	"BOI": {
+		description: "get datbot to tell someone what kind of boi they are",
+		syntax: "!boi <username>",
+		process: function(bot, msg, suff){
+			// console.log(suff);
+			var username = suff.join(' ');
+			if (suff.length = 0){
+				msg.reply("incorrect syntax. Please include a username");
+			} else {
+				var adjectives = [];
+
+				var rl = readLine.createInterface({
+					input: fs.createReadStream('./other_files/adjectives.txt'),
+				});
+
+				rl.on('line', (line) =>{
+					// console.log(line);
+					adjectives.push(line);
+				});
+
+				rl.on('close', function(){
+					var random = Math.floor(Math.random()*adjectives.length);
+					// console.log(username);
+
+					var adj = adjectives[random];
+					// console.log(adj);
+					if (adj.startsWith('a') || adj.startsWith('e') || adj.startsWith('i') || adj.startsWith('o') || adj.startsWith('u')){
+						msg.channel.sendMessage(username + " is an " + adj + " boi!");
+					} else {
+						msg.channel.sendMessage(username + " is a " + adj + " boi!");
+					}
+				});			
+				
+			}
 		}
 	}
 }
