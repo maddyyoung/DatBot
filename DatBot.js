@@ -1,3 +1,11 @@
+// THINGS TO DO
+// GIVE BOTH ROLL RESULTS
+// ADD TIME TO DATE COMMAND
+// ADD QUALIA COMMAND
+// ADD !BOI COMMAND
+// EDIT MESSAGE COMMAND TO ALLOW FOR THE SENDING OF COMMAND RESULTS
+
+
 var Discord = require("discord.js");
 
 var mybot = new Discord.Client();
@@ -822,13 +830,12 @@ var commands = {
 						console.log("adv");
 						result1 = rollDice(dice);
 						result2 = rollDice(dice);
-						if (result1 > result2){
+ 						if (result1 > result2){
 							result = result1
 						} else {
 							result = result2;
 						}
-						console.log("result1: " + result1);
-						console.log("result2: " + result2);
+						result += " (Roll 1:"+result1+", Roll 2: "+result2+")";
 						console.log("result: " + result);
 						break;
 					case 2: // disadvantage
@@ -840,8 +847,7 @@ var commands = {
 						} else {
 							result = result2;
 						}
-						console.log("result1: " + result1);
-						console.log("result2: " + result2);
+						result += " (Roll 1: "+result1+", Roll 2: "+result2+")";
 						console.log("result: " + result);
 						break;
 				}
