@@ -1,5 +1,4 @@
 // THINGS TO DO
-// GIVE BOTH ROLL RESULTS
 // ADD TIME TO DATE COMMAND
 // ADD QUALIA COMMAND
 // ADD !BOI COMMAND
@@ -930,8 +929,9 @@ var commands = {
 			var dd = today.getDate();
 			var	mm = today.getMonth(); //January is 0
 			var	yyyy = today.getFullYear();
-			var day = today.getDay();	
-			msg.reply("today's date is "+ days[day] + " " + dd + " " + months[mm] + " " + yyyy + "");
+			var day = today.getDay();
+			var time = today.toLocaleTimeString();	
+			msg.reply("it is currently "+time+" on " + days[day] + " " + dd + " " + months[mm] + " " + yyyy + "");
 			if (day = 1){
 				// message phillammon
 			}
