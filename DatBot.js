@@ -1,5 +1,4 @@
 // THINGS TO DO
-// ADD TIME TO DATE COMMAND
 // ADD QUALIA COMMAND
 // ADD !BOI COMMAND
 // EDIT MESSAGE COMMAND TO ALLOW FOR THE SENDING OF COMMAND RESULTS
@@ -190,7 +189,7 @@ var commands = {
 				if (count == 0){
 					console.log("user " + usernameID[0] + " does not exist.");
 				} else if (count > 1){
-					console.log("there is more than one user with that username. Please include the discriminator of the user you wish to message e.g. DatBot#4434.")
+					msg.reply("there is more than one user with that username. Please include the discriminator of the user you wish to message e.g. DatBot#4434.")
 				} else {
 					targetUser.sendMessage(messageText);
 				}
@@ -1116,7 +1115,22 @@ var commands = {
 			}
 		}
 	},
-
+	"QUALIA": {
+		description: "it's for nerds",
+		syntax: "!qualia <thing>",
+		process: function(bot,msg,suff){
+			// console.log(suff);
+			var thing = "";
+			if (suff.length == 0){
+				thing = msg.author.username;
+				// console.log(thing);
+			} else {
+				thing = suff.join(" ");
+				// console.log(thing);
+			}
+			msg.reply(thing + " is for nerds");
+		}
+	}
 }
 
 // on connect.
