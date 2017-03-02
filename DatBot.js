@@ -1139,7 +1139,7 @@ var commands = {
 		process: function(bot, msg, suff){
 			// console.log(suff);
 			var username = suff.join(' ');
-			if (suff.length = 0){
+			if (suff.length < 1){
 				msg.reply("incorrect syntax. Please include a username");
 			} else {
 				var adjectives = [];
